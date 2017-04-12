@@ -52,6 +52,10 @@ class Customization {
 			'woocommerce_admin_order_data_after_billing_address',
 			array( $this, 'show_checkout_fields_admin' )
 		);
+
+		// Remove the Yoast JSON-LD.
+		add_filter( 'wpseo_json_ld_output', '__return_false' );
+
 	}
 
 
